@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+      <script type="text/javascript" src="./ext-all.js"></script>
+
+      <script type="text/javascript">
+      Ext.onReady(function () {
+         var component1 = Ext.create('Ext.Component', {
+            html:'First Component'
+         });
+
+         var component2 = Ext.create('Ext.Component', {
+            html: 'Second Component'
+         });
+
+         var component3 = Ext.create('Ext.Component', {
+            html: 'Third Component'
+         });
+        var container =Ext.create('Ext.container.Container',{
+            border: 1,
+            style: {borderStyle: 'solid', borderWidth: '2px' },
+            items: [component1, component2]
+});
+var container2 =Ext.create('Ext.container.Container',{
+    border: 1,
+    style: {borderStyle: 'solid', borderWidth: '2px' },
+    items: [component3]
+});
+         Ext.create('Ext.container.Container', {
+            renderTo: Ext.getBody(),
+            title: 'Container',
+            border: 1,
+            width: '50%',
+            style: {borderStyle: 'solid', borderWidth: '2px' },
+            items: [container,container2]
+         });
+      });
+   </script>
+   </head>
+   <body>
+   </body>
+</html>

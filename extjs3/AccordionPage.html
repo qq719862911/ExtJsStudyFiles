@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+      <script type="text/javascript" src="./ext-all.js"></script>
+
+      <script type="text/javascript">
+      Ext.onReady(function () {
+        Ext.create('Ext.container.Container',{
+            renderTo:Ext.getBody(),
+            layout:'accordion',
+            width:300,
+            items:[{
+                title:'panel 1',
+                html:'Panel 1 html content'
+            },{
+                title:'panel 2',
+                html:'panel 2 html content'
+            },{
+                title:'panel 3',
+                html:'pnanel 3 html content'
+            }]
+        });
+      });
+   </script>
+   </head>
+   <body>
+   </body>
+</html>
